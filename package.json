@@ -1,0 +1,12 @@
+{
+  "name": "smartcity-control-center",
+  "version": "1.0.0",
+  "description": "SMARTCITY — Intelligent Urban Monitoring & Control Center",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

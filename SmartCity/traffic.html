@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Monitoring — SMARTCITY Control Center</title>
+    <meta name="description" content="Real-time traffic congestion monitoring and signal status management.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <input type="checkbox" id="theme-toggle" class="state-checkbox">
+    <input type="checkbox" id="mobile-menu-toggle" class="state-checkbox">
+
+    <div class="app-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="brand-logo">
+                    <span class="brand-icon">🏙️</span>
+                    <span class="brand-text">SMART<span>CITY</span></span>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section-title">Core Modules</div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html">
+                            <span class="nav-icon">📊</span>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="traffic.html">
+                            <span class="nav-icon">🚦</span>
+                            <span>Traffic</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="energy.html">
+                            <span class="nav-icon">💡</span>
+                            <span>Energy</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="environment.html">
+                            <span class="nav-icon">🌫️</span>
+                            <span>Environment</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="water.html">
+                            <span class="nav-icon">💧</span>
+                            <span>Water</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="transport.html">
+                            <span class="nav-icon">🚌</span>
+                            <span>Transport</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="emergency.html">
+                            <span class="nav-icon">🚨</span>
+                            <span>Emergency</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html">
+                            <span class="nav-icon">🏥</span>
+                            <span>City Services</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav-section-title">System</div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="login.html">
+                            <span class="nav-icon">🔑</span>
+                            <span>Login / Portal</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-quick-profile">
+                    <div class="user-avatar">AD</div>
+                    <div class="user-info">
+                        <div class="user-name">Administrator</div>
+                        <div class="user-status"><span class="status-dot"></span> Online</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN WRAPPER -->
+        <div class="main-wrapper">
+            <header class="header">
+                <div class="header-left">
+                    <label for="mobile-menu-toggle" class="mobile-menu-btn">☰</label>
+                    <div class="page-heading">
+                        <h1 class="page-title">🚦 Traffic Monitoring Center</h1>
+                        <span class="page-subtitle">Urban Traffic Density & Signal Control</span>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <div class="search-container">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" class="search-input" placeholder="Search roads, intersections..." aria-label="Search">
+                    </div>
+                    <label for="theme-toggle" class="theme-toggle-label">🌙</label>
+                </div>
+            </header>
+
+            <main class="page-content">
+                <!-- Stat Overview -->
+                <section class="dashboard-grid">
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Overall Congestion</span>
+                            <div class="stat-icon-wrapper stat-icon-traffic">🚦</div>
+                        </div>
+                        <div class="stat-value">72%</div>
+                        <div class="stat-meta"><span class="badge badge-warning">Moderate</span><span>Peak Hour</span></div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Active Vehicles</span>
+                            <div class="stat-icon-wrapper stat-icon-energy">🚗</div>
+                        </div>
+                        <div class="stat-value">12,540</div>
+                        <div class="stat-meta"><span class="badge badge-success">+4% vs Yesterday</span><span>City Wide</span></div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Smart Signals</span>
+                            <div class="stat-icon-wrapper stat-icon-env">🚥</div>
+                        </div>
+                        <div class="stat-value">148 / 150</div>
+                        <div class="stat-meta"><span class="badge badge-success">98.6% Operational</span><span>AI Synced</span></div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Average Speed</span>
+                            <div class="stat-icon-wrapper stat-icon-water">⚡</div>
+                        </div>
+                        <div class="stat-value">28 km/h</div>
+                        <div class="stat-meta"><span class="badge badge-info">Normal Flow</span><span>Main Arteries</span></div>
+                    </article>
+                </section>
+
+                <!-- Road Congestion List (Progress Bars) -->
+                <section class="grid-2-col">
+                    <article class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">🛣️ Major Arterial Road Status</h2>
+                            <span class="badge badge-info">Live Updates</span>
+                        </div>
+                        <div class="traffic-list">
+                            <!-- OMR -->
+                            <div class="traffic-item">
+                                <div class="traffic-info">
+                                    <span class="traffic-road">🛣️ OMR (Old Mahabalipuram Road)</span>
+                                    <span class="badge badge-danger">80% — Heavy</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar traffic-high" style="width: 80%;"></div>
+                                </div>
+                            </div>
+
+                            <!-- GST Road -->
+                            <div class="traffic-item">
+                                <div class="traffic-info">
+                                    <span class="traffic-road">🛣️ GST Road (Grand Southern Trunk)</span>
+                                    <span class="badge badge-warning">60% — Moderate</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar traffic-moderate" style="width: 60%;"></div>
+                                </div>
+                            </div>
+
+                            <!-- ECR -->
+                            <div class="traffic-item">
+                                <div class="traffic-info">
+                                    <span class="traffic-road">🛣️ ECR (East Coast Road)</span>
+                                    <span class="badge badge-success">40% — Light</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar traffic-light" style="width: 40%;"></div>
+                                </div>
+                            </div>
+
+                            <!-- Anna Salai -->
+                            <div class="traffic-item">
+                                <div class="traffic-info">
+                                    <span class="traffic-road">🛣️ Anna Salai</span>
+                                    <span class="badge badge-danger">70% — Heavy</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar traffic-high" style="width: 70%;"></div>
+                                </div>
+                            </div>
+
+                            <!-- Mount Road -->
+                            <div class="traffic-item">
+                                <div class="traffic-info">
+                                    <span class="traffic-road">🛣️ Mount Road</span>
+                                    <span class="badge badge-warning">50% — Moderate</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar traffic-moderate" style="width: 50%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Key Junction Signal Status Table -->
+                    <article class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">🚥 Key Signal Junctions</h2>
+                            <span class="badge badge-success">Adaptive Mode</span>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Junction</th>
+                                        <th>Signal Cycle</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>OMR - Tidal Park Junction</td>
+                                        <td>90 sec (Green: 45s)</td>
+                                        <td><span class="badge badge-warning">Congested</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>GST - Airport Intersection</td>
+                                        <td>120 sec (Green: 60s)</td>
+                                        <td><span class="badge badge-success">Flowing</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Anna Salai - Gemini Flyover</td>
+                                        <td>90 sec (Green: 30s)</td>
+                                        <td><span class="badge badge-danger">Heavy Delay</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ECR - Sholinganallur Signal</td>
+                                        <td>60 sec (Green: 35s)</td>
+                                        <td><span class="badge badge-success">Optimal</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mount Road - Guindy Circle</td>
+                                        <td>100 sec (Green: 50s)</td>
+                                        <td><span class="badge badge-warning">Moderate</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

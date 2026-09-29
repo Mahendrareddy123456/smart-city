@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator Login — SMARTCITY Control Center</title>
+    <meta name="description" content="Secure administrative login portal for SMARTCITY Urban Control Center.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-body">
+    <!-- Pure CSS Theme Toggle -->
+    <input type="checkbox" id="theme-toggle" class="state-checkbox">
+
+    <div class="app-container" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; width: 100%;">
+        <!-- Theme Toggle Positioned in Top-Right Corner -->
+        <div style="position: absolute; top: 1.5rem; right: 1.5rem;">
+            <label for="theme-toggle" class="theme-toggle-label" title="Toggle Dark/Light Mode">🌙</label>
+        </div>
+
+        <main class="login-card">
+            <div class="login-logo">🏙️</div>
+            <h1 class="login-title">SMART<span style="color: var(--primary);">CITY</span></h1>
+            <p class="login-subtitle">Intelligent Urban Control Center</p>
+
+            <form action="index.html" method="GET">
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" class="form-input" placeholder="admin@smartcity.gov" required value="admin@smartcity.gov">
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-input" placeholder="••••••••••••" required value="password123">
+                </div>
+
+                <button type="submit" class="btn-primary" style="margin-top: 0.5rem;">
+                    LOGIN TO CONTROL CENTER
+                </button>
+            </form>
+
+            <div>
+                <a href="#" class="login-footer-link">Forgot Administrator Password?</a>
+            </div>
+
+            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); font-size: 0.75rem; color: var(--text-muted);">
+                <a href="index.html" style="color: var(--primary); font-weight: 600;">← Back to Main Dashboard</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

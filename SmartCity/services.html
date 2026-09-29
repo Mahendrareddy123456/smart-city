@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Services Directory — SMARTCITY Control Center</title>
+    <meta name="description" content="Overview of civic facilities including hospitals, police, fire stations, schools, and community infrastructure.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <input type="checkbox" id="theme-toggle" class="state-checkbox">
+    <input type="checkbox" id="mobile-menu-toggle" class="state-checkbox">
+
+    <div class="app-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="brand-logo">
+                    <span class="brand-icon">🏙️</span>
+                    <span class="brand-text">SMART<span>CITY</span></span>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section-title">Core Modules</div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html">
+                            <span class="nav-icon">📊</span>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="traffic.html">
+                            <span class="nav-icon">🚦</span>
+                            <span>Traffic</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="energy.html">
+                            <span class="nav-icon">💡</span>
+                            <span>Energy</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="environment.html">
+                            <span class="nav-icon">🌫️</span>
+                            <span>Environment</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="water.html">
+                            <span class="nav-icon">💧</span>
+                            <span>Water</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="transport.html">
+                            <span class="nav-icon">🚌</span>
+                            <span>Transport</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="emergency.html">
+                            <span class="nav-icon">🚨</span>
+                            <span>Emergency</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="services.html">
+                            <span class="nav-icon">🏥</span>
+                            <span>City Services</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav-section-title">System</div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="login.html">
+                            <span class="nav-icon">🔑</span>
+                            <span>Login / Portal</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-quick-profile">
+                    <div class="user-avatar">AD</div>
+                    <div class="user-info">
+                        <div class="user-name">Administrator</div>
+                        <div class="user-status"><span class="status-dot"></span> Online</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN WRAPPER -->
+        <div class="main-wrapper">
+            <header class="header">
+                <div class="header-left">
+                    <label for="mobile-menu-toggle" class="mobile-menu-btn">☰</label>
+                    <div class="page-heading">
+                        <h1 class="page-title">🏥 Civic Infrastructure & Public Services</h1>
+                        <span class="page-subtitle">Directory of Essential Urban Infrastructure</span>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <div class="search-container">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" class="search-input" placeholder="Search facilities, hospitals..." aria-label="Search">
+                    </div>
+                    <label for="theme-toggle" class="theme-toggle-label">🌙</label>
+                </div>
+            </header>
+
+            <main class="page-content">
+                <!-- 8 Service Cards Grid -->
+                <section class="dashboard-grid">
+                    <!-- Hospitals -->
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Hospitals</span>
+                            <div class="stat-icon-wrapper stat-icon-emergency">🏥</div>
+                        </div>
+                        <div class="stat-value">12</div>
+                        <div class="stat-meta"><span class="badge badge-success">Operational</span><span>1,420 Beds</span></div>
+                    </article>
+
+                    <!-- Police Stations -->
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Police Stations</span>
+                            <div class="stat-icon-wrapper stat-icon-energy">🚓</div>
+                        </div>
+                        <div class="stat-value">15</div>
+                        <div class="stat-meta"><span class="badge badge-success">Patrolling</span><span>City Precincts</span></div>
+                    </article>
+
+                    <!-- Fire Stations -->
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Fire Stations</span>
+                            <div class="stat-icon-wrapper stat-icon-traffic">🚒</div>
+                        </div>
+                        <div class="stat-value">08</div>
+                        <div class="stat-meta"><span class="badge badge-warning">High Alert</span><span>Depots Active</span></div>
+                    </article>
+
+                    <!-- Waste Management -->
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Waste Management</span>
+                            <div class="stat-icon-wrapper stat-icon-env">🚮</div>
+                        </div>
+                        <div class="stat-value">42</div>
+                        <div class="stat-meta"><span class="badge badge-success">Active Fleet</span><span>94% Recycled</span></div>
+                    </article>
+                </section>
+
+                <section class="dashboard-grid">
+                    <!-- Ambulances -->
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Ambulance Units</span>
+                            <div class="stat-icon-wrapper stat-icon-emergency">🚑</div>
+                        </div>
+                        <div class="stat-value">28</div>
+                        <div class="stat-meta"><span class="badge badge-success">24 Ready</span><span>Rapid Response</span></div>
+                    </article>
+
+                    <!-- Schools -->
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Public Schools</span>
+                            <div class="stat-icon-wrapper stat-icon-water">🏫</div>
+                        </div>
+                        <div class="stat-value">34</div>
+                        <div class="stat-meta"><span class="badge badge-info">Open</span><span>18,500 Students</span></div>
+                    </article>
+
+                    <!-- Libraries -->
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Public Libraries</span>
+                            <div class="stat-icon-wrapper stat-icon-env">📚</div>
+                        </div>
+                        <div class="stat-value">16</div>
+                        <div class="stat-meta"><span class="badge badge-info">Open</span><span>Digital Access</span></div>
+                    </article>
+
+                    <!-- Community Centers -->
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Community Centers</span>
+                            <div class="stat-icon-wrapper stat-icon-energy">🏢</div>
+                        </div>
+                        <div class="stat-value">22</div>
+                        <div class="stat-meta"><span class="badge badge-success">Active Events</span><span>Civic Hubs</span></div>
+                    </article>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

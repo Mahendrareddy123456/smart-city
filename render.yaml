@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: smartcity-control-center
+    env: static
+    buildCommand: ""
+    staticPublishPath: ./SmartCity

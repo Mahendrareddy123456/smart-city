@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMARTCITY — Intelligent Urban Monitoring & Control Center</title>
+    <meta name="description" content="A futuristic, zero-JS Smart City monitoring dashboard built with HTML5 and CSS3.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Hidden Checkboxes for Pure CSS Dark Mode & Mobile Nav Drawer -->
+    <input type="checkbox" id="theme-toggle" class="state-checkbox">
+    <input type="checkbox" id="mobile-menu-toggle" class="state-checkbox">
+
+    <div class="app-container">
+        <!-- ===================================================================
+             SIDEBAR NAVIGATION
+             =================================================================== -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="brand-logo">
+                    <span class="brand-icon">🏙️</span>
+                    <span class="brand-text">SMART<span>CITY</span></span>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section-title">Core Modules</div>
+                <ul class="nav-list">
+                    <li class="nav-item active">
+                        <a href="index.html">
+                            <span class="nav-icon">📊</span>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="traffic.html">
+                            <span class="nav-icon">🚦</span>
+                            <span>Traffic</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="energy.html">
+                            <span class="nav-icon">💡</span>
+                            <span>Energy</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="environment.html">
+                            <span class="nav-icon">🌫️</span>
+                            <span>Environment</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="water.html">
+                            <span class="nav-icon">💧</span>
+                            <span>Water</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="transport.html">
+                            <span class="nav-icon">🚌</span>
+                            <span>Transport</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="emergency.html">
+                            <span class="nav-icon">🚨</span>
+                            <span>Emergency</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html">
+                            <span class="nav-icon">🏥</span>
+                            <span>City Services</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav-section-title">System</div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="login.html">
+                            <span class="nav-icon">🔑</span>
+                            <span>Login / Portal</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-quick-profile">
+                    <div class="user-avatar">AD</div>
+                    <div class="user-info">
+                        <div class="user-name">Administrator</div>
+                        <div class="user-status">
+                            <span class="status-dot"></span> Online
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ===================================================================
+             MAIN CONTENT WRAPPER
+             =================================================================== -->
+        <div class="main-wrapper">
+            <!-- TOP HEADER TOOLBAR -->
+            <header class="header">
+                <div class="header-left">
+                    <label for="mobile-menu-toggle" class="mobile-menu-btn" title="Toggle Navigation">☰</label>
+                    <div class="page-heading">
+                        <h1 class="page-title">City Control Center</h1>
+                        <span class="page-subtitle">Good Morning, Administrator 👋</span>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <!-- Visual Search Field -->
+                    <div class="search-container">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" class="search-input" placeholder="Search city services, zones, metrics..." aria-label="Search">
+                    </div>
+
+                    <!-- CSS Notification Dropdown (<details> Tag) -->
+                    <details class="notifications-dropdown">
+                        <summary class="notifications-summary" title="Notifications">
+                            🔔
+                            <span class="notification-badge">3</span>
+                        </summary>
+                        <div class="dropdown-panel">
+                            <div class="dropdown-header">
+                                <span class="dropdown-title">System Alerts</span>
+                                <span class="badge badge-danger">3 New</span>
+                            </div>
+                            <div class="notification-list">
+                                <div class="notification-item">
+                                    <span class="noti-icon">🚗</span>
+                                    <div class="noti-content">
+                                        <p>Traffic Congestion on OMR Road</p>
+                                        <span class="noti-time">10 mins ago</span>
+                                    </div>
+                                </div>
+                                <div class="notification-item">
+                                    <span class="noti-icon">🔥</span>
+                                    <div class="noti-content">
+                                        <p>Fire Alarm in T. Nagar Commercial Zone</p>
+                                        <span class="noti-time">15 mins ago</span>
+                                    </div>
+                                </div>
+                                <div class="notification-item">
+                                    <span class="noti-icon">💧</span>
+                                    <div class="noti-content">
+                                        <p>Minor Water Leakage in Zone C</p>
+                                        <span class="noti-time">30 mins ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <!-- Pure CSS Theme Toggle Switch -->
+                    <label for="theme-toggle" class="theme-toggle-label" title="Toggle Dark/Light Mode">
+                        🌙
+                    </label>
+                </div>
+            </header>
+
+            <!-- MAIN PAGE CONTENT -->
+            <main class="page-content">
+                <!-- 1. DASHBOARD SUMMARY CARDS -->
+                <section class="dashboard-grid">
+                    <!-- Traffic Card -->
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Traffic Status</span>
+                            <div class="stat-icon-wrapper stat-icon-traffic">🚦</div>
+                        </div>
+                        <div class="stat-value">72%</div>
+                        <div class="stat-meta">
+                            <span class="badge badge-warning">Moderate</span>
+                            <span>12,540 Vehicles</span>
+                        </div>
+                    </article>
+
+                    <!-- Energy Card -->
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Energy Usage</span>
+                            <div class="stat-icon-wrapper stat-icon-energy">💡</div>
+                        </div>
+                        <div class="stat-value">84%</div>
+                        <div class="stat-meta">
+                            <span class="badge badge-success">Normal</span>
+                            <span>4.8 MW Load</span>
+                        </div>
+                    </article>
+
+                    <!-- Air Quality Card -->
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Air Quality Index</span>
+                            <div class="stat-icon-wrapper stat-icon-env">🌫️</div>
+                        </div>
+                        <div class="stat-value">AQI 42</div>
+                        <div class="stat-meta">
+                            <span class="badge badge-success">Good</span>
+                            <span>PM2.5: 18 µg/m³</span>
+                        </div>
+                    </article>
+
+                    <!-- Emergency Card -->
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Active Alerts</span>
+                            <div class="stat-icon-wrapper stat-icon-emergency">🚨</div>
+                        </div>
+                        <div class="stat-value">03</div>
+                        <div class="stat-meta">
+                            <span class="badge badge-danger">2 Critical</span>
+                            <span>1 Warning</span>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- 2. CITY MAP & CITY SERVICES SUMMARY -->
+                <section class="grid-2-col">
+                    <!-- Stylized Vector CSS City Map -->
+                    <article class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">🗺️ Live Urban Monitoring Map</h2>
+                            <span class="badge badge-info">Interactive Grid</span>
+                        </div>
+                        <div class="map-container">
+                            <div class="map-grid-overlay"></div>
+                            <!-- Roads -->
+                            <div class="map-road-main"></div>
+                            <div class="map-road-cross"></div>
+
+                            <!-- Zones -->
+                            <div class="map-zone zone-north">North Tech Corridor</div>
+                            <div class="map-zone zone-central">Central Business District</div>
+                            <div class="map-zone zone-south">South Industrial Park</div>
+
+                            <!-- CSS Map Pin Markers -->
+                            <div class="map-marker marker-1" style="top: 25%; left: 30%;" title="OMR Traffic Congestion">
+                                🚦
+                                <div class="tooltip">OMR Road: 80% Congestion</div>
+                            </div>
+                            <div class="map-marker marker-2" style="top: 48%; left: 58%;" title="City General Hospital">
+                                🏥
+                                <div class="tooltip">City General Hospital (100% Active)</div>
+                            </div>
+                            <div class="map-marker marker-3" style="top: 70%; left: 25%;" title="Bus Terminal Metro">
+                                🚌
+                                <div class="tooltip">Central Bus Depot: 86 Active Buses</div>
+                            </div>
+                            <div class="map-marker marker-4" style="top: 35%; left: 75%;" title="Fire Station Emergency Alert">
+                                🚨
+                                <div class="tooltip">Fire Station #3: Active Dispatch</div>
+                            </div>
+
+                            <div class="map-legend">
+                                <div class="legend-item"><span style="color: #ef4444;">●</span> Traffic</div>
+                                <div class="legend-item"><span style="color: #3b82f6;">●</span> Services</div>
+                                <div class="legend-item"><span style="color: #10b981;">●</span> Transit</div>
+                                <div class="legend-item"><span style="color: #f59e0b;">●</span> Alerts</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Quick City Services Summary Card -->
+                    <article class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">🏥 City Services Overview</h2>
+                            <a href="services.html" class="badge badge-info">View All →</a>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Service</th>
+                                        <th>Units</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>🏥 Hospitals</td>
+                                        <td><strong>12</strong> Facilities</td>
+                                        <td><span class="badge badge-success">Operational</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>🚓 Police Stations</td>
+                                        <td><strong>15</strong> Stations</td>
+                                        <td><span class="badge badge-success">Operational</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>🚒 Fire Stations</td>
+                                        <td><strong>8</strong> Depots</td>
+                                        <td><span class="badge badge-warning">High Alert</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>🚮 Waste Management</td>
+                                        <td><strong>42</strong> Trucks</td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>🚑 Ambulances</td>
+                                        <td><strong>28</strong> Units</td>
+                                        <td><span class="badge badge-success">Ready</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- 3. TRAFFIC PROGRESS & SMART STREET LIGHTS -->
+                <section class="grid-2-col-equal">
+                    <!-- Traffic Monitoring Card -->
+                    <article class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">🚦 Key Road Congestion</h2>
+                            <a href="traffic.html" class="badge badge-info">Full Report</a>
+                        </div>
+                        <div class="traffic-list">
+                            <div class="traffic-item">
+                                <div class="traffic-info">
+                                    <span class="traffic-road">🛣️ OMR Expressway</span>
+                                    <span>80% — Heavy</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar traffic-high" style="width: 80%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="traffic-item">
+                                <div class="traffic-info">
+                                    <span class="traffic-road">🛣️ GST Road</span>
+                                    <span>60% — Moderate</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar traffic-moderate" style="width: 60%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="traffic-item">
+                                <div class="traffic-info">
+                                    <span class="traffic-road">🛣️ Anna Salai</span>
+                                    <span>70% — Heavy</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar traffic-high" style="width: 70%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="traffic-item">
+                                <div class="traffic-info">
+                                    <span class="traffic-road">🛣️ Mount Road</span>
+                                    <span>50% — Moderate</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar traffic-moderate" style="width: 50%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="traffic-item">
+                                <div class="traffic-info">
+                                    <span class="traffic-road">🛣️ East Coast Road (ECR)</span>
+                                    <span>40% — Light</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar traffic-light" style="width: 40%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Smart Street Lights Section (Visual Component) -->
+                    <article class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">💡 Smart Street Lighting Infrastructure</h2>
+                            <span class="badge badge-success">32% Energy Saved</span>
+                        </div>
+                        <div class="streetlight-visual-card">
+                            <p style="font-size: 0.85rem; color: #cbd5e1;">Automated Grid Intensity: <strong>Night Mode Active</strong></p>
+                            
+                            <!-- Pure CSS Streetlight Visual -->
+                            <div class="street-light-row">
+                                <div class="light-pole">
+                                    <div class="bulb-glow"></div>
+                                    <div class="pole-stem"></div>
+                                </div>
+                                <div class="light-pole">
+                                    <div class="bulb-glow"></div>
+                                    <div class="pole-stem"></div>
+                                </div>
+                                <div class="light-pole">
+                                    <div class="bulb-glow"></div>
+                                    <div class="pole-stem"></div>
+                                </div>
+                                <div class="light-pole">
+                                    <div class="bulb-glow"></div>
+                                    <div class="pole-stem"></div>
+                                </div>
+                            </div>
+
+                            <div class="street-light-stats">
+                                <div class="light-stat-item">
+                                    <div class="light-stat-val">12,450</div>
+                                    <div class="light-stat-lbl">Total Lights</div>
+                                </div>
+                                <div class="light-stat-item">
+                                    <div class="light-stat-val" style="color: #4ade80;">12,210</div>
+                                    <div class="light-stat-lbl">Online</div>
+                                </div>
+                                <div class="light-stat-item">
+                                    <div class="light-stat-val" style="color: #f87171;">240</div>
+                                    <div class="light-stat-lbl">Offline</div>
+                                </div>
+                                <div class="light-stat-item">
+                                    <div class="light-stat-val" style="color: #60a5fa;">32%</div>
+                                    <div class="light-stat-lbl">Saved</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Management — SMARTCITY Control Center</title>
+    <meta name="description" content="City energy grid consumption, solar generation, battery storage, and power station status.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <input type="checkbox" id="theme-toggle" class="state-checkbox">
+    <input type="checkbox" id="mobile-menu-toggle" class="state-checkbox">
+
+    <div class="app-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="brand-logo">
+                    <span class="brand-icon">🏙️</span>
+                    <span class="brand-text">SMART<span>CITY</span></span>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section-title">Core Modules</div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html">
+                            <span class="nav-icon">📊</span>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="traffic.html">
+                            <span class="nav-icon">🚦</span>
+                            <span>Traffic</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="energy.html">
+                            <span class="nav-icon">💡</span>
+                            <span>Energy</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="environment.html">
+                            <span class="nav-icon">🌫️</span>
+                            <span>Environment</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="water.html">
+                            <span class="nav-icon">💧</span>
+                            <span>Water</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="transport.html">
+                            <span class="nav-icon">🚌</span>
+                            <span>Transport</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="emergency.html">
+                            <span class="nav-icon">🚨</span>
+                            <span>Emergency</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html">
+                            <span class="nav-icon">🏥</span>
+                            <span>City Services</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav-section-title">System</div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="login.html">
+                            <span class="nav-icon">🔑</span>
+                            <span>Login / Portal</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-quick-profile">
+                    <div class="user-avatar">AD</div>
+                    <div class="user-info">
+                        <div class="user-name">Administrator</div>
+                        <div class="user-status"><span class="status-dot"></span> Online</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN WRAPPER -->
+        <div class="main-wrapper">
+            <header class="header">
+                <div class="header-left">
+                    <label for="mobile-menu-toggle" class="mobile-menu-btn">☰</label>
+                    <div class="page-heading">
+                        <h1 class="page-title">💡 Energy Grid & Generation</h1>
+                        <span class="page-subtitle">Power Generation, Microgrids & Distribution</span>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <div class="search-container">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" class="search-input" placeholder="Search power stations, grids..." aria-label="Search">
+                    </div>
+                    <label for="theme-toggle" class="theme-toggle-label">🌙</label>
+                </div>
+            </header>
+
+            <main class="page-content">
+                <!-- 4 Core Stat Cards -->
+                <section class="dashboard-grid">
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Total Consumption</span>
+                            <div class="stat-icon-wrapper stat-icon-energy">⚡</div>
+                        </div>
+                        <div class="stat-value">4.8 MW</div>
+                        <div class="stat-meta"><span class="badge badge-success">Optimal Grid Load</span><span>Current Demand</span></div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Solar Generation</span>
+                            <div class="stat-icon-wrapper stat-icon-env">☀️</div>
+                        </div>
+                        <div class="stat-value">2.1 MW</div>
+                        <div class="stat-meta"><span class="badge badge-success">43.7% Clean Power</span><span>Peak Sunlight</span></div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Battery Storage</span>
+                            <div class="stat-icon-wrapper stat-icon-water">🔋</div>
+                        </div>
+                        <div class="stat-value">78%</div>
+                        <div class="stat-meta"><span class="badge badge-info">Reserve Ready</span><span>3.2 MWh Stored</span></div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Power Stations</span>
+                            <div class="stat-icon-wrapper stat-icon-traffic">🏢</div>
+                        </div>
+                        <div class="stat-value">12</div>
+                        <div class="stat-meta"><span class="badge badge-warning">1 In Maintenance</span><span>Grid Total</span></div>
+                    </article>
+                </section>
+
+                <!-- Energy Table & Breakdown -->
+                <section class="grid-2-col">
+                    <!-- Power Stations Table -->
+                    <article class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">🏢 Power Station Directory</h2>
+                            <span class="badge badge-info">12 Grid Nodes</span>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Station</th>
+                                        <th>Location</th>
+                                        <th>Capacity</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Station A</strong></td>
+                                        <td>North Zone (Tech Park)</td>
+                                        <td>1.8 MW</td>
+                                        <td><span class="badge badge-success">Online</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Station B</strong></td>
+                                        <td>South Zone (Industrial)</td>
+                                        <td>2.2 MW</td>
+                                        <td><span class="badge badge-success">Online</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Station C</strong></td>
+                                        <td>East Zone (Port Area)</td>
+                                        <td>1.2 MW</td>
+                                        <td><span class="badge badge-warning">Maintenance</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Station D</strong></td>
+                                        <td>West Zone (Residential)</td>
+                                        <td>1.5 MW</td>
+                                        <td><span class="badge badge-success">Online</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+
+                    <!-- Clean Energy Mix Breakdown -->
+                    <article class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">🌱 Energy Mix Sources</h2>
+                            <span class="badge badge-success">Renewable Focus</span>
+                        </div>
+                        <div class="traffic-list">
+                            <div class="traffic-item">
+                                <div class="traffic-info">
+                                    <span>☀️ Solar Microgrids</span>
+                                    <span>44% (2.1 MW)</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar traffic-light" style="width: 44%;"></div>
+                                </div>
+                            </div>
+                            <div class="traffic-item">
+                                <div class="traffic-info">
+                                    <span>⚡ Municipal Grid Feed</span>
+                                    <span>38% (1.8 MW)</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar traffic-moderate" style="width: 38%;"></div>
+                                </div>
+                            </div>
+                            <div class="traffic-item">
+                                <div class="traffic-info">
+                                    <span>💨 Wind Turbines</span>
+                                    <span>18% (0.9 MW)</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar traffic-light" style="width: 18%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

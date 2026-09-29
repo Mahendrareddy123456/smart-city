@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environment Monitoring — SMARTCITY Control Center</title>
+    <meta name="description" content="Air quality, climate parameters, green cover, and environmental health metrics.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <input type="checkbox" id="theme-toggle" class="state-checkbox">
+    <input type="checkbox" id="mobile-menu-toggle" class="state-checkbox">
+
+    <div class="app-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="brand-logo">
+                    <span class="brand-icon">🏙️</span>
+                    <span class="brand-text">SMART<span>CITY</span></span>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section-title">Core Modules</div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html">
+                            <span class="nav-icon">📊</span>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="traffic.html">
+                            <span class="nav-icon">🚦</span>
+                            <span>Traffic</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="energy.html">
+                            <span class="nav-icon">💡</span>
+                            <span>Energy</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="environment.html">
+                            <span class="nav-icon">🌫️</span>
+                            <span>Environment</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="water.html">
+                            <span class="nav-icon">💧</span>
+                            <span>Water</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="transport.html">
+                            <span class="nav-icon">🚌</span>
+                            <span>Transport</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="emergency.html">
+                            <span class="nav-icon">🚨</span>
+                            <span>Emergency</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html">
+                            <span class="nav-icon">🏥</span>
+                            <span>City Services</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav-section-title">System</div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="login.html">
+                            <span class="nav-icon">🔑</span>
+                            <span>Login / Portal</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-quick-profile">
+                    <div class="user-avatar">AD</div>
+                    <div class="user-info">
+                        <div class="user-name">Administrator</div>
+                        <div class="user-status"><span class="status-dot"></span> Online</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN WRAPPER -->
+        <div class="main-wrapper">
+            <header class="header">
+                <div class="header-left">
+                    <label for="mobile-menu-toggle" class="mobile-menu-btn">☰</label>
+                    <div class="page-heading">
+                        <h1 class="page-title">🌫️ Environmental Health & Climate</h1>
+                        <span class="page-subtitle">Air Quality, Urban Canopy & Carbon Metrics</span>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <div class="search-container">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" class="search-input" placeholder="Search eco sensors, zones..." aria-label="Search">
+                    </div>
+                    <label for="theme-toggle" class="theme-toggle-label">🌙</label>
+                </div>
+            </header>
+
+            <main class="page-content">
+                <!-- 8 Metric Cards Grid -->
+                <section class="dashboard-grid">
+                    <!-- AQI -->
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Air Quality Index</span>
+                            <div class="stat-icon-wrapper stat-icon-env">🌫️</div>
+                        </div>
+                        <div class="stat-value">AQI 42</div>
+                        <div class="stat-meta"><span class="badge badge-success">GOOD</span><span>Sensor #24</span></div>
+                    </article>
+
+                    <!-- Temperature -->
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Temperature</span>
+                            <div class="stat-icon-wrapper stat-icon-warning">🌡️</div>
+                        </div>
+                        <div class="stat-value">29°C</div>
+                        <div class="stat-meta"><span class="badge badge-info">Comfortable</span><span>Feels like 31°C</span></div>
+                    </article>
+
+                    <!-- Humidity -->
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Humidity</span>
+                            <div class="stat-icon-wrapper stat-icon-water">💧</div>
+                        </div>
+                        <div class="stat-value">68%</div>
+                        <div class="stat-meta"><span class="badge badge-info">Moderate</span><span>Coastal Breeze</span></div>
+                    </article>
+
+                    <!-- CO2 -->
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">CO₂ Level</span>
+                            <div class="stat-icon-wrapper stat-icon-traffic">☁️</div>
+                        </div>
+                        <div class="stat-value">412 ppm</div>
+                        <div class="stat-meta"><span class="badge badge-success">Clean Standard</span><span>Urban Avg</span></div>
+                    </article>
+                </section>
+
+                <section class="dashboard-grid">
+                    <!-- PM2.5 -->
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">PM2.5 Concentration</span>
+                            <div class="stat-icon-wrapper stat-icon-env">🔬</div>
+                        </div>
+                        <div class="stat-value">18 µg/m³</div>
+                        <div class="stat-meta"><span class="badge badge-success">Safe Level</span><span>WHO Benchmark</span></div>
+                    </article>
+
+                    <!-- Green Coverage -->
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Green Canopy</span>
+                            <div class="stat-icon-wrapper stat-icon-env">🌳</div>
+                        </div>
+                        <div class="stat-value">68%</div>
+                        <div class="stat-meta"><span class="badge badge-success">Target Exceeded</span><span>Parks & Reserves</span></div>
+                    </article>
+
+                    <!-- Water Quality -->
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Water Quality</span>
+                            <div class="stat-icon-wrapper stat-icon-water">🧪</div>
+                        </div>
+                        <div class="stat-value">GOOD</div>
+                        <div class="stat-meta"><span class="badge badge-success">pH 7.4 Safe</span><span>Reservoir Tap</span></div>
+                    </article>
+
+                    <!-- Solar Efficiency -->
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Solar Efficiency</span>
+                            <div class="stat-icon-wrapper stat-icon-energy">☀️</div>
+                        </div>
+                        <div class="stat-value">82%</div>
+                        <div class="stat-meta"><span class="badge badge-success">High Output</span><span>Clear Skies</span></div>
+                    </article>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
